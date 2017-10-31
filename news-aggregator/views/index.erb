@@ -1,0 +1,10 @@
+
+<h1>The News Times</h1>
+<a href="/articles/new">Submit a New Article</a>
+<ul>
+  <% CSV.foreach("articles.csv") do |article| %>
+  <li><%= article[0] %><br/>
+  <a href="http://<%= article[1] %>"><%= article[1] %></a><br/>
+  <%= article[2] %></li>
+<% end %>
+</ul>
